@@ -16,21 +16,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView messagePhoto;
-    Random random = new Random(System.currentTimeMillis());
+    Random random ;
 
     int min = 0;
     int max = 100;
-    int number = min + random.nextInt(max - min + 1);
+    int number;
 
-    @SuppressLint({"WrongViewCast", "SetTextI18n"})
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+         random = new Random(System.currentTimeMillis());
+         number = min + random.nextInt(max - min + 1);
+
         messagePhoto = findViewById(R.id.text_message_photo);
-        messagePhoto.setText("Фото: " + number);
+        messagePhoto.setText(getString(R.string.photo) + number);
+
         Button clickStartButton = findViewById(R.id.button_start);
         clickStartButton.setOnClickListener(clickStartListener);
 

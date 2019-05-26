@@ -2,4 +2,5 @@
     <string name="app_name">EndlessTransition</string>
     <string name="end">вперед</string>
     <string name="start">назал</string>
+    <string name="photo">Фото:</string>
 </resources>
