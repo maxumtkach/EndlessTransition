@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         random = new Random(System.currentTimeMillis());
+         random = new Random(System.currentTimeMillis());  //инициализация переменных
          number = min + random.nextInt(max - min + 1);
 
         messagePhoto = findViewById(R.id.text_message_photo);
