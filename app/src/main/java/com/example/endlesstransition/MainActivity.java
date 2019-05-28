@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     int min = 0;
       int max = 100;
-             int number;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -28,10 +26,12 @@ public class MainActivity extends AppCompatActivity {
               setContentView(R.layout.activity_main);
 
          random = new Random(System.currentTimeMillis());  //инициализация переменных
-              number = min + random.nextInt(max - min + 1);
+              int numberItem = min + random.nextInt(max - min + 1);
+                   String photoString = getResources().getString(R.string.photo);
+
 
         messagePhoto = findViewById(R.id.text_message_photo);
-               messagePhoto.setText(getString(R.string.photo) + number);
+            messagePhoto.setText(getString(R.string.welcome_messages,photoString,numberItem));
 
         Button clickStartButton = findViewById(R.id.button_start);
              clickStartButton.setOnClickListener(clickStartListener);
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
 
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                 messagePhoto.setText("Фото:  " + number);
                     startActivity(intent);
         }
     };

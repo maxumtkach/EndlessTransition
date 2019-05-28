@@ -2,5 +2,7 @@
     <string name="app_name">EndlessTransition</string>
     <string name="end">вперед</string>
     <string name="start">назал</string>
-    <string name="photo">Фото:</string>
+    <string name="photo">Фото</string>
+    <string name="number">number</string>
+    <string name="welcome_messages">Hello, %1$s! You have %2$d new messages.</string>
 </resources>
