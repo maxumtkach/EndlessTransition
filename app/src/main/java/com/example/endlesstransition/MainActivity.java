@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     int min = 0;
       int max = 100;
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
               setContentView(R.layout.activity_main);
